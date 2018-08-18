@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetLayout"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/activity_vertical_margin"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="60dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <TextView
+        android:id="@+id/bottomSheetHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:text="Hi,"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
+    <Button
+        android:id="@+id/btKeluar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="50dp"
+        android:text="Keluar"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@drawable/rounded_button_wh"
+        android:textColor="@color/colorPrimary"
+        android:elevation="5dp"/>
+        android:textAppearance="@android:style/TextAppearance.Large" />
+</RelativeLayout>

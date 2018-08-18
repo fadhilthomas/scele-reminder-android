@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clipToPadding="false"
+        android:background="#ecf1f4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                android:clipToPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/colorPrimary"
+                    android:elevation="5dp">
+
+                    <include layout="@layout/toolbar" />
+
+                </LinearLayout>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+                    <android.support.v4.widget.SwipeRefreshLayout
+                        android:id="@+id/swipeRefreshLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="#ecf1f4">
+
+                            <ProgressBar
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:id="@+id/pb"
+                                android:layout_gravity="center"
+                                android:indeterminate="true"
+                                android:indeterminateTintMode="src_atop"
+                                android:indeterminateTint="@color/colorPrimary"
+                                android:layout_centerHorizontal="true"
+                                style="?android:progressBarStyleLarge"/>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:id="@+id/recyclerView"
+                                android:padding="10dp"
+                                android:clipToPadding="false"
+                                android:layout_alignParentStart="true">
+                            </android.support.v7.widget.RecyclerView>
+
+                        </LinearLayout>
+
+                    </android.support.v4.widget.SwipeRefreshLayout>
+
+                </RelativeLayout>
+
+            </android.support.design.widget.AppBarLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="170dp"
+            android:layout_gravity="bottom|end"
+            android:elevation="6dp"
+            android:layout_marginEnd="10dp"
+            app:fabSize="normal"
+            android:onClick="pengaturan"
+            app:backgroundTint="#fff"
+            android:src="@drawable/setting"/>
+        <!-- Bottom Sheet Content -->
+        <include
+            layout="@layout/bottom_sheet"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clipToPadding="false"
+        android:background="#fff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                android:clipToPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/colorPrimary"
+                    android:elevation="5dp">
+
+                    <include layout="@layout/toolbar" />
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#fff"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:src="@drawable/login"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                                android:layout_gravity="center"/>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/tilNPM"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp">
+                                <EditText android:id="@+id/tvNPM"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textEmailAddress"
+                                    android:hint="NPM"
+                                    android:textSize="18sp"
+                                    android:textColorHint="#454545"
+                                    android:textColor="#454545"
+                                    android:textColorHighlight="#454545"
+                                    android:textColorLink="#454545"
+                                    android:background="@drawable/garis_2"/>
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/tilPass"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp">
+                                <EditText android:id="@+id/tvPass"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textPassword"
+                                    android:hint="Kata Sandi"
+                                    android:textSize="18sp"
+                                    android:textColorHint="#454545"
+                                    android:textColor="#454545"
+                                    android:background="@drawable/garis_2"/>
+                            </android.support.design.widget.TextInputLayout>
+
+                            <CheckBox
+                                android:id="@+id/cbShowPwd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="13dp"
+                                android:layout_below="@+id/edit_text_password_activity_main"
+                                android:textSize="14sp"
+                                android:buttonTint="@color/colorPrimary"
+                                android:textColor="@color/colorSc2"
+                                android:text="Tampikan Kata Sandi"  />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:text="Masuk"
+                                android:textSize="18sp"
+                                android:id="@+id/btMasuk"
+                                android:background="@drawable/rounded_button"
+                                android:layout_below="@id/edit_text_password_activity_main"
+                                android:textColor="@android:color/white"
+                                android:layout_marginTop="@dimen/activity_vertical_margin"
+                                android:elevation="5dp"
+                                android:onClick="login"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </android.support.design.widget.AppBarLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:alpha="0.7"
+            android:clickable="true"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                />
+
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ecf1f4">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clipToPadding="false"
+        android:background="#ecf1f4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ecf1f4"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                android:clipToPadding="false"
+                android:background="#ecf1f4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/colorPrimary"
+                    android:elevation="5dp">
+
+                    <include layout="@layout/toolbar" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#ecf1f4"
+                    android:paddingTop="20dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:layout_marginBottom="10dp">
+                    <TextView
+                        android:id="@+id/tvJudul"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rentang Hari"
+                        android:textColor="@color/colorSc2"
+                        android:textSize="22sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#ecf1f4"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tvLalu"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lalu"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp"
+                            android:paddingTop="5dp"
+                            android:paddingStart="20dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <EditText
+                            android:id="@+id/etLalu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:background="@drawable/garis"
+                            android:paddingBottom="6dp"
+                            android:paddingStart="4dp"
+                            android:lines="1"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:paddingTop="6dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="15dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#ecf1f4"
+                    android:layout_marginTop="10dp"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tvAkanDatang"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Akan Datang"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp"
+                            android:paddingTop="5dp"
+                            android:paddingStart="20dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <EditText
+                            android:id="@+id/etAkanDatang"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:background="@drawable/garis"
+                            android:paddingBottom="6dp"
+                            android:paddingStart="4dp"
+                            android:lines="1"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:paddingTop="6dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="15dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="30dp"
+                    android:text="Simpan"
+                    android:textSize="18sp"
+                    android:id="@+id/btSimpan"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="@android:color/white"
+                    android:elevation="5dp"
+                    android:onClick="simpan"/>
+
+            </android.support.design.widget.AppBarLayout>
+
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</android.support.v4.widget.DrawerLayout>

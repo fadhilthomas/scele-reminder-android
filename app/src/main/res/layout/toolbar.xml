@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    app:titleTextColor="#fff">
+
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="25dp"
+        android:src="@drawable/textlogo"/>
+
+</android.support.v7.widget.Toolbar>
