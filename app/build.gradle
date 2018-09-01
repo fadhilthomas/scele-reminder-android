@@ -32,5 +32,6 @@ dependencies {
     compile 'com.android.support:design:27.0.0'
     compile 'com.uncopt:android.justified:1.0'
     compile 'org.jsoup:jsoup:1.10.1'
+    compile 'com.facebook.shimmer:shimmer:0.1.0@aar'
     testCompile 'junit:junit:4.12'
 }

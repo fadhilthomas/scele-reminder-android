@@ -1,1 +1,0 @@
-# android-scele_reminder

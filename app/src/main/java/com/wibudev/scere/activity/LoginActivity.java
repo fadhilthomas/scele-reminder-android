@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -33,9 +34,9 @@ public class LoginActivity extends AppCompatActivity {
     private TextView tvPass;
     private TextInputLayout tilNPM;
     private TextInputLayout tilPass;
-    private String npm = "null";
-    private String pass = "null";
-    private String nama = "null";
+    private String npm = "";
+    private String pass = "";
+    private String nama = "";
     private CheckBox mCbShowPwd;
     private Button btMasuk;
     private boolean logged = false;
@@ -46,7 +47,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/font.ttf");
-        Typeface custom_font_bold = Typeface.createFromAsset(getAssets(),  "fonts/fontBold.ttf");
 
         tvNPM = findViewById(R.id.tvNPM);
         tvPass = findViewById(R.id.tvPass);
@@ -59,6 +59,10 @@ public class LoginActivity extends AppCompatActivity {
         btMasuk.setTypeface(custom_font);
         tilNPM.setTypeface(custom_font);
         tilPass.setTypeface(custom_font);
+
+        loadLogin();
+        tvNPM.setText(npm);
+        tvPass.setText(pass);
 
         mCbShowPwd = findViewById(R.id.cbShowPwd);
         mCbShowPwd.setTypeface(custom_font);
@@ -75,6 +79,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/font.ttf");
+
         if (TextUtils.isEmpty(tvNPM.getText())) {
             Snackbar.make(findViewById(android.R.id.content), "NPM tidak boleh kosong", Snackbar.LENGTH_LONG).show();
         } else if (TextUtils.isEmpty(tvPass.getText())) {
@@ -98,6 +104,12 @@ public class LoginActivity extends AppCompatActivity {
         editor.putString("pass", pass);
         editor.putString("nama", nama);
         editor.apply();
+
+        SharedPreferences sharedPref2 = getSharedPreferences("loginSaved", 0);
+        SharedPreferences.Editor editor2 = sharedPref2.edit();
+        editor2.putString("npm", npm);
+        editor2.putString("pass", pass);
+        editor2.apply();
     }
 
     private void loginAcc() {
@@ -145,5 +157,12 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         }).start();
+    }
+
+    private void loadLogin(){
+        SharedPreferences sharedPref = getSharedPreferences("loginSaved", 0);
+        npm = sharedPref.getString("npm","");
+        pass = sharedPref.getString("pass","");
+        nama = sharedPref.getString("nama"," ");
     }
 }

@@ -8,4 +8,5 @@
     <color name="colorSc">#909090</color>
     <color name="colorSc4">#555555</color>
     <color name="colorBt">#F14950</color>
+    <color name="background">#dddddd</color>
 </resources>
